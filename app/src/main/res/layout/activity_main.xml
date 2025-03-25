@@ -11,12 +11,13 @@
         android:id="@+id/txtTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista de Pessoas"
+        android:text="Lista de Perfumes"
         android:textSize="20sp"
         android:gravity="center"
         android:padding="10dp"
         android:textStyle="bold"
-        android:background="@color/yellow" />
+        android:background="#502012"
+        android:textColor="@color/white"/>
 
     <ListView
         android:layout_width="match_parent"

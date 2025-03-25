@@ -1,31 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:weightSum="100"
-    android:id="@+id/template">
+    android:weightSum="100">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="50"
         android:weightSum="100">
 
         <ImageView
             android:id="@+id/img"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_weight="50" />
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:layout_gravity="center"/>
 
-        <TextView
-            android:id="@+id/txt01"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:text="txt01"
-            android:textAlignment="center"
-            android:layout_weight="50"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtmarca"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="txt01"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/txtnome"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="txt01"
+                android:textAlignment="center" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
@@ -36,18 +52,17 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txt02"
+            android:id="@+id/txtdesc"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="txt02" />
 
-        <TextView
-            android:id="@+id/txt03"
+        <ImageView
+            android:id="@+id/iv_avaliacao"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:text="txt03" />
+            android:layout_height="45dp"
+            android:layout_weight="50"/>
 
     </LinearLayout>
 

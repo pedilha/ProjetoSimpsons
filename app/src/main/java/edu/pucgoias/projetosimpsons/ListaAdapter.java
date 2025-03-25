@@ -37,14 +37,15 @@ public class ListaAdapter extends ArrayAdapter<Pessoa> {
 
         Pessoa pessoa = listaPessoas.get(position);
 
-        TextView txtNome = convertView.findViewById(R.id.txt01);
-        TextView txtMatricula = convertView.findViewById(R.id.txt02);
-        TextView txtStatus = convertView.findViewById(R.id.txt03);
+        TextView txtNome = convertView.findViewById(R.id.txtnome);
+        TextView txtMarca = convertView.findViewById(R.id.txtmarca);
+        TextView txtDescricao = convertView.findViewById(R.id.txtdesc);
+        ImageView imgavaliacao = convertView.findViewById(R.id.iv_avaliacao);
         ImageView imgIcon = convertView.findViewById(R.id.img);
 
         txtNome.setText(pessoa.getNome());
-        txtMatricula.setText(pessoa.getMatricula());
-        txtStatus.setText(pessoa.getStatus());
+        txtMarca.setText(pessoa.getMarca());
+        txtDescricao.setText(pessoa.getDescricao());
 
         // Definir imagem (precisa estatr em drawable)
         //imgIcon.setImageResource(R.drawable.ic_launcher_foreground);
@@ -57,6 +58,16 @@ public class ListaAdapter extends ArrayAdapter<Pessoa> {
             imgIcon.setImageResource(imageResource);
         } else {
             imgIcon.setImageResource(R.drawable.ic_launcher_background); // Imagem padrão caso não encontre
+        }
+
+        int imageResource2 = contexto.getResources().getIdentifier(
+                pessoa.getImgav(), "drawable", contexto.getPackageName()
+        );
+
+        if (imageResource2 != 0) {
+            imgavaliacao.setImageResource(imageResource2);
+        } else {
+            imgavaliacao.setImageResource(R.drawable.ic_launcher_background); // Imagem padrão caso não encontre
         }
 
         return convertView;
